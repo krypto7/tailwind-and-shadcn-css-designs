@@ -5,47 +5,45 @@ import Img from "next/image";
 function Header() {
   return (
     <header className="p-4 border-b border-white/15">
-      <div className="">
-        <div className="flex justify-between">
+      <div className="container mx-auto">
+        <div className="flex justify-between lg:justify-around items-center">
           <div>
             <Img src={logoIcon} className="h-8 w-8" alt="Logo" />
           </div>
-          <div>
-            <nav>
-              <ul className="flex gap-8 text-white/70 items-center justify-center">
-                <li>
-                  <a
-                    href="#"
-                    className=" hover:text-white transition-colors duration-100"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className=" hover:text-white transition-colors duration-100"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className=" hover:text-white transition-colors duration-100"
-                  >
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className=" hover:text-white transition-colors duration-100"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
+          <div className="border border-white/20 rounded-3xl px-8 py-2 hidden md:block ">
+            <nav className="flex gap-8 items-center">
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors duration-100"
+              >
+                Features
+              </a>
+
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors duration-100"
+              >
+                Developers
+              </a>
+
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors duration-100"
+              >
+                Company
+              </a>
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors duration-100"
+              >
+                Blog
+              </a>
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors duration-100"
+              >
+                Changelog
+              </a>
             </nav>
           </div>
           <div className="flex items-center gap-4">
@@ -57,7 +55,7 @@ function Header() {
               </div>
               <span>Join waitlist</span>
             </button>
-            <span>
+            <span className="md:hidden lg:hidden cursor-pointer">
               <Img src={Menu} className="h-8 w-8" alt="Logo" />
             </span>
           </div>
